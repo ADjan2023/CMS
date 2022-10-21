@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost","root","","class_contact_mgt");
+$db = mysqli_connect("us-cdbr-east-06.cleardb.net","beca59ae1f784e","cfbb6a99","heroku_26e9e802a6e9e18");
 
 // Check connection
    if ($db->connect_error) {
