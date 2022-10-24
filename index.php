@@ -119,7 +119,6 @@ $data=json_decode($resp,true);
 
 curl_close($curl);
 
-$i=0;
                                     $i=0;
                                     while($i < count($data)){
                                     ?>  
@@ -127,12 +126,12 @@ $i=0;
                                     <tr class="tr-shadow">
 
                                        
-                                        <td><?php echo $data['pname'] ?></td>
-                                        <td><?php echo $data['pphoned'] ?></td>
+                                        <td><?php echo $data[$i]['pname'] ?></td>
+                                        <td><?php echo $data[$i]['pphoned'] ?></td>
                                         <td>
                                             <div class="table-data-feature" style="padding-right: 70px;">
                                                <form method="POST" action="edittask.php" style="padding-right: 20px;">
-                                                <input type="hidden" value="<?php echo $data['pid'] ?>" name='id'>
+                                                <input type="hidden" value="<?php echo $data[$i]['pid'] ?>" name='id'>
 
                                                 <button class="item" data-toggle="tooltip" data-placement="top" title="Edit" name="edit" >
                                                     <i class="zmdi zmdi-edit"></i>
@@ -141,7 +140,7 @@ $i=0;
 
                                             </form>
                                             <form method="POST" action="controllers/delete.php" style="padding-right: 20px;" onSubmit="return confirm('Do you want to delete this contact?') ">
-                                                <input type="hidden" value="<?php echo $data['pid'] ?>" name='id'>
+                                                <input type="hidden" value="<?php echo $data[$i]['pid'] ?>" name='id'>
 
                                                 <button  class="item" data-toggle="tooltip" data-placement="top" title="Delete"  name="delete">
                                                     <i class="zmdi zmdi-delete"></i>
