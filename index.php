@@ -164,6 +164,7 @@ curl_close($curl);
 
                             </tbody>
                          <?php
+                         $i++;
                      }
                          ?>
                     </table>
