@@ -99,9 +99,9 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                    ob_start();
+                                   /* ob_start();
                                     include 'controllers/dbconnect.php';
-                                    ob_end_clean();
+                                    ob_end_clean();*/
                                     //$read=mysqli_query($db,"SELECT * FROM `phonebook`");
                                     $url = 'https://ecommerceskeletonserver.herokuapp.com/actions/apicontact.php';
 
