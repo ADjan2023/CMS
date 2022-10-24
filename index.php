@@ -48,8 +48,10 @@
                  <!-- WELCOME-->
                 
                 
-              
-    
+  
+
+ 
+
 
 
 
@@ -100,8 +102,26 @@
                                     ob_start();
                                     include 'controllers/dbconnect.php';
                                     ob_end_clean();
-                                    $read=mysqli_query($db,"SELECT * FROM `phonebook`");
-                                    while($data = mysqli_fetch_array($read)){
+                                    //$read=mysqli_query($db,"SELECT * FROM `phonebook`");
+                                    $url = 'https://ecommerceskeletonserver.herokuapp.com/actions/apicontact.php';
+
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+$headers = array(
+   "Accept: application/json",
+);
+curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+$resp = curl_exec($curl);
+$data=json_decode($resp,true);
+
+curl_close($curl);
+
+$i=0;
+                                    $i=0;
+                                    while($i < count($data)){
                                     ?>  
                                    
                                     <tr class="tr-shadow">
