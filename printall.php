@@ -1,7 +1,7 @@
 <?php
 
 $url = 'https://ecommerceskeletonserver.herokuapp.com/actions/apicontact.php';
-
+/*
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -38,7 +38,9 @@ echo "<td> <form method='POST' action='../actions/selectonecontact.php' >
 echo "</tr>";
 $i++;
 }
-echo "<table>";
+echo "</table>";*/
+$data=json_decode(file_get_contents($url, false),true);
+print_r($data);
 
 /*function callAPI($method, $url, $data){
    $curl = curl_init();

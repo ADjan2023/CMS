@@ -105,7 +105,7 @@
                                     //$read=mysqli_query($db,"SELECT * FROM `phonebook`");
                                     $url = 'https://ecommerceskeletonserver.herokuapp.com/actions/apicontact.php';
 
-$curl = curl_init($url);
+/*$curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
@@ -117,7 +117,8 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 $resp = curl_exec($curl);
 $data=json_decode($resp,true);
 
-curl_close($curl);
+curl_close($curl);*/
+$data=json_decode(file_get_contents($url, false),true);
 
                                     $i=0;
                                     while($i < count($data)){
