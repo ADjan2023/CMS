@@ -77,6 +77,11 @@
                             </div>
                             
                         </div>
+                        <div class="table-data__tool-left">
+                           
+                               <a href="paystack/index.php"> <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                    <i class="zmdi zmdi-plus"></i>Paystack Payment</button></a>
+                            </div>
                         <div class="table-data__tool-right">
                             <form action="addcontact.php" method="POST">
                                 <button class="au-btn au-btn-icon au-btn--green au-btn--small">
