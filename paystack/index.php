@@ -9,7 +9,7 @@
 <form id="paymentForm">
   <div class="form-group">
     <label for="email">Email Address</label>
-    <input type="email" id="email-address" required />
+    <input type="email" id="email" required />
   </div>
   <div class="form-group">
     <label for="amount">Amount</label>
