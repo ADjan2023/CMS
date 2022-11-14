@@ -15,15 +15,13 @@
     <label for="amount">Amount</label>
     <input type="tel" id="amount" required />
   </div>
-  
   <div class="form-submit">
     <button type="submit" onclick="payWithPaystack()"> Pay </button>
   </div>
 </form>
 
 <script src="https://js.paystack.co/v1/inline.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/pay.js"></script>
-
-</body>
 </html>
 
